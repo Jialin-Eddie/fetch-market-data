@@ -57,6 +57,7 @@ Rationale: paid plugins charge per call. Loading the wrong source's pitfalls doe
 
 ## Bundled scripts
 
-- [scripts/fetch_ifind.py](scripts/fetch_ifind.py) — parameterized iFinD batch downloader (probe mode, chunk mode, robust time parsing, retry). Tested 54 symbols.
+- [scripts/fetch_ifind.py](scripts/fetch_ifind.py) — iFinD batch downloader (probe/fetch/batch modes, 3-year auto-chunk, robust time parsing, retry). Tested 54 symbols.
 - [scripts/fetch_wind_edb.py](scripts/fetch_wind_edb.py) — Wind EDB fetcher that parses the saved-CSV path from the CLI notice. Tested 16 indicators.
+- [scripts/fetch_igo.py](scripts/fetch_igo.py) — FRED / ECB / Eurostat / OECD in one CLI: fred single-call with `units` transform; ecb daily auto-chunk to 2y windows (top=1000 cap); eurostat auto month-chunking (20-value time filter cap) with dict-repr parsing. Tested on all three sources.
 - [scripts/validate_pool.py](scripts/validate_pool.py) — validate all CSVs in a directory and print the inventory table.
